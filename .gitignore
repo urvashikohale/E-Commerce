@@ -1,2 +1,5 @@
 projbackend/node_modules
 projfrontend/node_modules
+projfrontend/build
+projfrontend/.env
+projbackend/.env

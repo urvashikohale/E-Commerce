@@ -6,8 +6,8 @@ import {signin,authenticate, isAuthenticated} from "../auth/helper"
 const Signin=()=>{
 
     const [values,setValues]=useState({
-        email:"monicageller@gmail.com",
-        password:"12345",
+        email:"",
+        password:"",
         error:"",
         loading: false,
         didRedirect: false
@@ -93,12 +93,16 @@ const errorMessage=()=>{
 
                         <div className="form-group">
                             <label className="text-light">Email</label>
-                            <input onChange={handleChange("email")} value={email} className="form-control" type="email" />
+                            <input 
+                            placeholder="Enter email address"
+                            onChange={handleChange("email")} value={email} className="form-control" type="email" />
                         </div>
 
                         <div className="form-group">
                             <label className="text-light">Password</label>
-                            <input onChange={handleChange("password")} value={password} className="form-control" type="password"/>
+                            <input 
+                            placeholder="Enter password"
+                            onChange={handleChange("password")} value={password} className="form-control" type="password"/>
                         </div>
                         <div className="d-grid gap-2">
                         <button onClick={onSubmit} className="btn btn-success btn-block ">Submit</button>
